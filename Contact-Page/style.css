@@ -1,0 +1,143 @@
+.contact-h1 {
+  text-align: center;
+}
+
+.contact-text p {
+  color: var(--white);
+  margin-bottom: 25px;
+  font-size: 2.4rem;
+  line-height: 2em;
+}
+
+.contact {
+  font-family: monospace;
+  color: var(--textColor);
+  background: var(--bodyBg);
+  padding-bottom: 5em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+
+  margin: auto;
+}
+
+.heading,
+.sub-heading {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 2.5em;
+}
+
+.sub-heading {
+  text-align: left;
+}
+
+.contactForm {
+  display: grid;
+  gap: 3em;
+}
+
+form {
+  width: 100%;
+  margin-top: 3em;
+}
+
+.imgInput {
+  background: url(images/send.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.para2 {
+  text-align: left;
+}
+
+.input {
+  width: 95%;
+
+  max-width: 700px;
+  border: none;
+  font-size: 1.6rem;
+  padding: 1em;
+  outline: none;
+  background-color: var(--formBg);
+  color: var(--white);
+  border-radius: 10px;
+  border: 1px solid rgb(53, 53, 53);
+  margin-bottom: 1em;
+}
+
+.input:focus {
+  border: 1px solid var(--primaryColor);
+}
+
+.input::placeholder {
+  text-transform: capitalize;
+}
+
+.submit {
+  background-color: var(--primaryColor);
+  border: none;
+  color: var(--textColor);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.image-wrap-positioned {
+  width: 40%;
+  height: 500px;
+}
+.img-info-positioned {
+  width: 225%;
+}
+
+iframe {
+  height: 500px;
+}
+
+.map {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+}
+
+.contactMethod {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.method {
+  display: flex;
+  align-items: center;
+}
+
+.contactIcon {
+  font-size: 2rem;
+  color: var(--primaryColor);
+  width: 70px;
+}
+
+.contact-p p {
+  font-size: 2.25em;
+  color: var(--formBg);
+}
+
+.contact-p {
+  text-align: center;
+  padding: 4em;
+  padding-bottom: 0;
+}

@@ -1,0 +1,73 @@
+.container > * {
+  gap: 0.5em;
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  outline: 0.25em solid silver;
+  width: 50em;
+  margin: 10em auto;
+  font-family: monospace;
+}
+
+button {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 10em;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.fill-button {
+  background-color: #f0f0f0;
+  transition: background-color 0.5s ease;
+}
+
+.fill-button.fill {
+  background-color: #4caf50;
+}
+
+p {
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+input[type="text"] {
+  width: 30rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+header {
+  border-bottom: 0.05em solid silver;
+  font-size: 3em;
+}
+
+#clock {
+  margin: auto;
+  width: 100%;
+  font-size: 3rem;
+}

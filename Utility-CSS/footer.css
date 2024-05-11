@@ -1,0 +1,85 @@
+/****** FOOTER *********/
+/****** FOOTER *********/
+/****** FOOTER *********/
+
+#copyright {
+  padding-bottom: 15px;
+}
+
+.footer {
+  background-color: #002240;
+  color: #fff;
+  padding-bottom: 0px;
+  margin: 0px;
+}
+
+.footer h1 {
+  font-size: 4rem;
+  padding-bottom: 15px;
+}
+
+.footer .social a {
+  margin-right: 30px;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.footer li a {
+  color: white;
+
+  font-size: 14px;
+}
+
+#footer-links a {
+  font-size: 2rem;
+}
+
+#footer-links {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.footer li a:hover {
+  color: red;
+}
+
+.github,
+.linkedin,
+.spotify {
+  height: 50px;
+  width: 52px;
+}
+
+.soundcloud {
+  height: 55px;
+  width: 60px;
+}
+
+.linkedin:hover {
+  background-color: #0077b5;
+  border-radius: 40em;
+}
+.github:hover {
+  background-color: #333;
+  border-radius: 50em;
+}
+
+.spotify:hover {
+  background-color: #1db954;
+  border-radius: 50em;
+}
+
+.soundcloud:hover {
+  background-color: #ff7700;
+  border-radius: 30em;
+}
+
+.container-footer {
+  width: 100%;
+  margin: 2em auto;
+
+  padding: 0px 4em 0px 4em;
+
+  gap: 1em;
+}

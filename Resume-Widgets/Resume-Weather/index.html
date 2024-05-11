@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App Widget</title>
+  <link rel="stylesheet" href="../../Utility-CSS/header.css" />
+  <link rel="stylesheet" href="../../Utility-CSS/footer.css" />
+  <link rel="stylesheet" href="../../Utility-CSS/utility.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" />
+</head>
+
+<body>
+  <!-- Header Section -->
+  <section class="header">
+    <div class="div-header">
+      <h1>About Me ~ Richard Lechko.</h1>
+    </div>
+
+    <div class="box">
+      <div>
+        <li class="life-link">
+          <a href="../../index.html#personal-life">Personal</a>
+        </li>
+      </div>
+      <div>
+        <li class="tech-link">
+          <a href="../../index.html#technical-skills">Skills</a>
+        </li>
+      </div>
+      <div>
+        <li class="work-link">
+          <a href="../../index.html#work-experience">Work</a>
+        </li>
+      </div>
+      <div>
+        <li class="edu-link">
+          <a href="../../index.html#education">Education</a>
+        </li>
+      </div>
+      <div>
+        <li class="home-link">
+          <a href="../../index.html">Home</a>
+        </li>
+      </div>
+      <div>
+        <li class="widgets-link">
+          <a href="../widgets.html">Widgets</a>
+        </li>
+      </div>
+    </div>
+  </section>
+  <a href="#" class="back-to-top">
+    <span class="up"><img src="../../images/892692.png" alt="Back to Top Icon" /></span>
+  </a>
+  <div class="card">
+    <div class="search">
+      <input type="text" placeholder="Enter City Name" spellcheck="false" />
+      <button><img src="images/search.png" /></button>
+    </div>
+    <div class="error">
+      <p>Invalid City Name</p>
+    </div>
+    <div class="weather">
+      <h2 class="city">New York</h2>
+      <img src="images/rain.png" class="weather-icon" />
+      <h1 class="temp">22°C</h1>
+      <h2 class="type-weather">Clear</h2>
+
+      <div class="loc">
+        <h3 class="latitude">Lat: 999</h3>
+        <h3 class="longitude">Long: 999</h3>
+      </div>
+      <div class="details">
+        <div class="col">
+          <img src="images/humidity.png" />
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="col">
+          <img src="images/wind.png" />
+          <div>
+            <p class="wind">15 km/h</p>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../client.js"></script>
+
+  <footer class="footer bg-dark py-5">
+    <div class="container-footer">
+      <div>
+        <h1 class="headertitle">About Me ~ Richard Lechko</h1>
+        <p>
+          &copy;
+
+          <script>
+            var today = new Date();
+            document.write(today.getFullYear());
+          </script>
+          Richard Lechko, All Rights Reserved
+        </p>
+      </div>
+      <nav id="footer-links">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#personal-life">Personal Life</a></li>
+          <li><a href="../../index.html#technical-skills">Skills</a></li>
+          <li><a href="../../index.html#work-experience">Work Experience</a></li>
+          <li><a href="../../index.html#education">Education</a></li>
+          <li><a href="../../Contact-Page/contact.html">Contact</a></li>
+          <li><a href="../widgets.html">Widgets</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a href="https://github.com/RichardLechko" target="_blank"><img src="../../images/github2.png" alt="GitHub Icon"
+            class="github" /></a>
+        <a href="https://www.linkedin.com/in/richard-lechko/" target="_blank"><img src="../../images/linkedin.png"
+            class="linkedin" alt="LinkedIn Icon" /></a>
+        <a href="https://open.spotify.com/user/22j4lmvcuabn2joznuzxd3pdy?si=be67aa3576934843" target="_blank"><img
+            src="../../images/spotify.png" alt="Spotify Icon" class="spotify" /></a>
+        <a href="https://soundcloud.com/richardlechko" target="_blank"><img src="../../images/soundcloud.png"
+            alt="SoundCloud Icon" class="soundcloud" />
+        </a>
+      </div>
+      <div id="lastModifiedText">
+        <br />
+        <p id="lastModifiedTxt">
+          <script>
+            var latestDate = new Date(document.lastModified);
+            document.getElementById("lastModifiedTxt").innerHTML =
+              "Last Modified: " + latestDate;
+          </script>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

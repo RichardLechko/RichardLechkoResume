@@ -1,0 +1,62 @@
+* {
+  font-family: "Poppins";
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.wrapper-curr {
+  display: flex;
+}
+
+.container-currency {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.currency-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rest of the styles */
+
+.currency-form input,
+.currency-form select {
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.convert-btn {
+  padding: 10px;
+  background-color: #007bff; /* Adjust color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.convert-btn:hover {
+  background-color: #0056b3; /* Adjust hover color as needed */
+}
+
+.image-container {
+  flex-grow: 1;
+  display: flex;
+}
+
+.image {
+  margin-top: -10px;
+  width: 100px;
+  height: 130px;
+  transform: rotate(90deg);
+}
+
+.image:hover {
+  cursor: pointer;
+}

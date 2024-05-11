@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin: auto;
+    outline: 1px solid red;
+    width: 50em;
+}
+
+.date-group {
+    display: flex;
+    align-items: center;
+    margin: 0; /* Remove margin */
+}
+
+.label-text {
+    margin-right: 10px; /* Add space between label and input */
+}
+
+.date-group input[type="datetime-local"] {
+    margin: 0; /* Remove input margin */
+    padding: 0; /* Remove input padding */
+}

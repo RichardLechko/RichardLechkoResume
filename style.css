@@ -1,0 +1,274 @@
+/************* PERSONAL LIFE ***********/
+/************* PERSONAL LIFE ***********/
+/************* PERSONAL LIFE ***********/
+
+.life-text p,
+.tech-note p {
+  color: var(--dark-violet);
+  margin-bottom: 25px;
+  font-size: 2.4rem;
+  line-height: 2em;
+}
+
+/* Add a more specific selector */
+.container .tech-note p {
+  font-size: 2.4rem; /* Adjust the font size as needed */
+}
+
+.life-text li {
+  padding-left: 100px;
+  font-size: 2.1rem;
+  color: black;
+}
+
+.personal-life #spotify {
+  text-decoration: none;
+  color: #1db954;
+}
+
+/************ COMPUTING AND NON-COMPUTING SKILLS ***********/
+/************ COMPUTING AND NON-COMPUTING SKILLS ***********/
+/************ COMPUTING AND NON-COMPUTING SKILLS ***********/
+
+#technical-skills {
+  margin-bottom: 200px;
+}
+
+#non-technical-skills {
+  margin-bottom: 50px;
+}
+
+.technical-skills .flex,
+.non-technical-skills .flex,
+.header .flex {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  z-index: 1;
+}
+
+.technical-skills .card,
+.non-technical-skills .card,
+.technical-skills .card-child {
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+  position: relative;
+  padding-bottom: 5px;
+  background-color: #333;
+  color: white;
+  flex-direction: column;
+}
+
+.technical-skills .card-child {
+  color: #333;
+  background-color: #e4c8c8;
+  border-radius: 10px;
+}
+
+.technical-skills .card,
+.technical-skills .card-child,
+.technical-skills .color-card {
+  padding: 20px;
+}
+
+.technical-skills .card h4,
+.non-technical-skills .card h4,
+.header .card h4,
+.technical-skills .card-child h4,
+.technical-skills .color-card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.technical-skills .card:hover,
+.non-technical-skills .card:hover,
+.technical-skills .card-child:hover {
+  transform: translateY(-15px);
+}
+
+.technical-skills img {
+  opacity: 1;
+  height: 100px;
+  width: 102px;
+}
+
+.technical-skills .card img,
+.technical-skills .card-child img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.technical-skills .card .rating,
+.technical-skills .card-child .rating {
+  display: none;
+}
+
+.technical-skills .card:hover .rating {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 1;
+  color: white;
+}
+
+.color-coded {
+  width: 100%;
+  margin: auto;
+  padding-top: 2em;
+  justify-content: center;
+  display: flex;
+  gap: 4em;
+}
+
+.technical-skills .color-card {
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+}
+
+.technical-skills .card:hover .rating[data-understanding="level6"] {
+  background-color: #ff8c00; /* Level 6 (Dark Orange) */
+}
+
+.technical-skills .card:hover .rating[data-understanding="level7"] {
+  background-color: #556b2f; /* Level 7 (Dark Olive Green) */
+}
+
+.technical-skills .card:hover .rating[data-understanding="level8"] {
+  background-color: #483d8b; /* Level 8 (Dark Slate Blue) */
+}
+
+.technical-skills .card:hover .rating[data-understanding="level9"] {
+  background-color: #008b8b; /* Level 9 (Dark Cyan) */
+}
+
+.technical-skills .card:hover .rating[data-understanding="level10"] {
+  background-color: #2f4f4f; /* Level 10 (Dark Slate Gray) */
+}
+
+.horizontal-card {
+  display: flex;
+}
+
+#technical-skills {
+  padding-bottom: 20em;
+}
+
+.skills-grid {
+  display: flex;
+  margin: auto;
+}
+
+.skills-grid > *:nth-child(2) {
+  transform: translateY(20px);
+  outline: 1px solid #000;
+}
+
+.skills-grid > *:nth-child(3) {
+  transform: translateY(40px);
+  outline: 1px solid #000;
+}
+
+.skills-grid > *:nth-child(4) {
+  transform: translateY(60px);
+  outline: 1px solid #000;
+}
+
+.skills-grid > *:nth-child(5) {
+  transform: translateY(80px);
+  outline: 1px solid #000;
+}
+
+.skills-grid > *:nth-child(6) {
+  transform: translateY(60px);
+  outline: 1px solid #000;
+}
+
+.skills-grid > *:first-child,
+.skills-grid > *:last-child {
+  outline: 1px solid #000;
+}
+
+/********** WORK EXPERIENCE *********/
+/********** WORK EXPERIENCE *********/
+/********** WORK EXPERIENCE *********/
+
+.work-text dd {
+  color: var(--dark-violet);
+  margin-bottom: 25px;
+  font-size: 2.4rem;
+  line-height: 3.95rem;
+}
+
+.work-text dt {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 2.65rem;
+  line-height: 3.95rem;
+  font-weight: bold;
+}
+
+.marianos {
+  margin-bottom: 50px;
+}
+
+/******** EDUCATION *********/
+/******** EDUCATION *********/
+/******** EDUCATION *********/
+
+.edu-text p {
+  color: var(--dark-violet);
+  margin-bottom: 25px;
+  font-size: 2.4rem;
+  line-height: 3.95rem;
+}
+
+.edu-text span {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+.edu-text a {
+  text-decoration: none;
+  color: #054696;
+}
+
+.edu-text #uni {
+  color: #e4002b;
+}
+
+@media only screen and (width < 900px) {
+  /* div > * {
+    outline: 1px solid red;
+  } */
+
+  .card .horizontal-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-disappear,
+  .color-text {
+    display: none;
+  }
+
+  iframe {
+    width: 400px;
+  }
+
+  #technical-skills {
+    margin-bottom: 600px;
+  }
+
+  #non-technical-skills {
+    margin-bottom: 150px;
+  }
+}

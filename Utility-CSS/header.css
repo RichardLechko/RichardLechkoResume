@@ -1,0 +1,120 @@
+:root {
+  --dark-violet: hsl(257, 27%, 26%);
+  --gray: hsl(0, 0%, 75%);
+
+  --grayish-violet: hsl(260, 7%, 59%);
+
+  --white: #fff;
+  --bodyBg: #303841;
+  --formBg: #343f4b;
+  --textColor: #fff;
+  --primaryColor: #0076a3;
+  --paraColor: #5e6c79;
+  --paraColor: #74828f;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  font-family: "Poppins";
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--grayish-violet);
+  line-height: 1.6;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  width: 100%;
+  margin: 2em auto;
+
+  justify-content: space-around;
+  padding: 0px 4em 0px 4em;
+  display: flex;
+  flex-flow: wrap;
+  gap: 1em;
+}
+
+/************ HEADER ************/
+/************ HEADER ************/
+/************ HEADER ************/
+
+.header {
+  background-color: var(--gray);
+}
+
+.headertitle,
+.footertitle {
+  font-family: monospace;
+}
+
+.header {
+  background-color: var(--gray);
+}
+
+.div-header h1 {
+  margin: auto;
+  font-size: 4em;
+  text-align: center;
+}
+
+.life-link a,
+.tech-link a,
+.work-link a,
+.edu-link a,
+.contact-link a,
+.widgets-link a,
+.home-link a {
+  background-color: #f0f0f0;
+  font-size: 2em;
+  list-style-type: none;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+
+  gap: 4em;
+}
+.box > * {
+  border-radius: 15px;
+  padding: 20px 10px 20px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  flex: 1 1 160px;
+  text-align: center;
+}

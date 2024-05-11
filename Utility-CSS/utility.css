@@ -1,0 +1,199 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  background-color: silver;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 17px;
+}
+
+/********* BACK TO TOP ********/
+/********* BACK TO TOP ********/
+/********* BACK TO TOP ********/
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  z-index: 2;
+}
+
+span img {
+  opacity: 1;
+  height: 80px;
+  width: 82px;
+}
+
+.back-to-top span {
+  transition: 0.2s ease-out;
+}
+
+.back-to-top:hover span {
+  transform: translateY(-6px);
+}
+
+/************ UTILITY ***********/
+/************ UTILITY ***********/
+/************ UTILITY ***********/
+
+.u-mb-small {
+  margin-bottom: 1.6rem;
+}
+
+.u-mb-medium {
+  margin-bottom: 3rem;
+}
+
+.u-mb-large {
+  margin-bottom: 5rem;
+}
+
+/************ TEXT SIZES **************/
+/************ TEXT SIZES **************/
+/************ TEXT SIZES **************/
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/************ MARGIN *************/
+/************ MARGIN *************/
+/************ MARGIN *************/
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/********** PADDING ***********/
+/********** PADDING ***********/
+/********** PADDING ***********/
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 1.5rem 0;
+}
+
+.py-3 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 3rem 0;
+}
+
+.py-5 {
+  padding: 4rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
+}
+
+.p-3 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 3rem;
+}
+
+.p-5 {
+  padding: 4rem;
+}
+
+/****** BOXES ********/
+/****** BOXES ********/
+/****** BOXES ********/
+
+.box-2 {
+  margin-top: 4%;
+}
+
+.box-3 {
+  margin-top: 8%;
+}
+
+/******* BACKGROUND *********/
+/******* BACKGROUND *********/
+/******* BACKGROUND *********/
+
+.bg-dark {
+  background-color: #002240;
+  color: #fff;
+}
+
+/********* CONTACT *********/
+/********* CONTACT *********/
+/********* CONTACT *********/
+
+
