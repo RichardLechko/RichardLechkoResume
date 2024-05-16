@@ -8,6 +8,8 @@ proxy-server/dist/
 
 # Ignore .env file inside proxy-server directory
 proxy-server/.env
+.env/
+Contact-Page/.env
 
 # Ignore the PDF and DocX files
 Richard_Lechko_Resume_May_10_2024.pdf

@@ -31,7 +31,7 @@
 /************ COMPUTING AND NON-COMPUTING SKILLS ***********/
 
 #technical-skills {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 #non-technical-skills {
@@ -95,6 +95,11 @@
   width: 102px;
 }
 
+#aws {
+  height: 100px;
+  width: 180px;
+}
+
 .technical-skills .card img,
 .technical-skills .card-child img {
   max-width: 100%;
@@ -123,6 +128,7 @@
   width: 100%;
   margin: auto;
   padding-top: 2em;
+  text-align: center;
   justify-content: center;
   display: flex;
   gap: 4em;
@@ -245,30 +251,58 @@
   color: #e4002b;
 }
 
-@media only screen and (width < 900px) {
-  /* div > * {
-    outline: 1px solid red;
-  } */
-
-  .card .horizontal-card {
-    display: flex;
-    flex-direction: column;
+@media only screen and (width <= 1564px) {
+  #technical-skills {
+    margin-bottom: 100px;
   }
 
   .box-disappear,
   .color-text {
     display: none;
   }
+}
+
+@media only screen and (width <= 1530px) {
+  #technical-skills {
+    margin-bottom: 200px;
+  }
+}
+
+@media only screen and (width <= 1092px) {
+  #technical-skills {
+    margin-bottom: 300px;
+  }
+}
+
+@media only screen and (width <= 1049px) {
+  #technical-skills {
+    margin-bottom: 400px;
+  }
+}
+
+@media only screen and (width <= 997px) {
+  #technical-skills {
+    margin-bottom: 350px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card .horizontal-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  span,
+  a {
+    text-align: center;
+  }
 
   iframe {
     width: 400px;
-  }
-
-  #technical-skills {
-    margin-bottom: 600px;
-  }
-
-  #non-technical-skills {
-    margin-bottom: 150px;
   }
 }

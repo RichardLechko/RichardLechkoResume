@@ -3,6 +3,12 @@ import httpProxy from "http-proxy";
 import dotenv from "dotenv";
 import express from "express";
 import fetch from "node-fetch";
+import bodyParser from "body-parser";
+import nodemailer from "nodemailer";
+import path from "path";
+import "dotenv/config";
+
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 // Create a proxy server instance
 const proxy = httpProxy.createProxyServer({});
@@ -13,6 +19,12 @@ const app = express();
 
 const weatherApiKey = process.env.WEATHER_API_KEY; // Define weatherApiKey here
 const currencyApiKey = process.env.CURRENCY_API_KEY; // Define currencyApiKey here
+
+app.use(express.static(path.join(__dirname, "freedombutchers-main")));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "freedombutchers-main")));
 
 // Export weatherApiKey
 export { weatherApiKey };
@@ -57,6 +69,46 @@ app.get("/api/currency-key", async (req, res) => {
   } catch (error) {
     console.error("Error fetching currency data:", error);
     res.status(500).json({ error: "Failed to fetch currency data" });
+  }
+});
+
+// Handle contact form submissions
+app.post("/submit", async (req, res) => {
+  const { name, email, subject, message } = req.body;
+
+  try {
+    // Send email
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "richardlechko04@gmail.com", // Update with your email
+        pass: process.env.GMAIL_PASS, // Update with your email password or use environment variables
+      },
+    });
+
+    const mailOptions = {
+      from: "richardlechko04@gmail.com", // Update with your email address
+      to: email, // Use the email provided by the user
+      subject: subject,
+      text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    // Send success response
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("Error sending email:", error);
+
+    // Check for specific errors
+    if (error.code === "EAUTH") {
+      res.status(500).json({
+        success: false,
+        error: "Invalid email credentials. Please check your email settings.",
+      });
+    } else {
+      res.status(500).json({ success: false, error: "Failed to send email" });
+    }
   }
 });
 

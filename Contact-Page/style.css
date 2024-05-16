@@ -1,27 +1,9 @@
-.contact-h1 {
-  text-align: center;
-}
-
-.contact-text p {
-  color: var(--white);
-  margin-bottom: 25px;
-  font-size: 2.4rem;
-  line-height: 2em;
-}
-
-.contact {
-  font-family: monospace;
-  color: var(--textColor);
-  background: var(--bodyBg);
-  padding-bottom: 5em;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 90%;
-  max-width: 550px;
+  max-width: 900px;
 
   margin: auto;
 }
@@ -41,7 +23,9 @@
 }
 
 .contactForm {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   gap: 3em;
 }
 
@@ -56,14 +40,8 @@ form {
   background-position: left top;
 }
 
-.para2 {
-  text-align: left;
-}
-
 .input {
-  width: 95%;
-
-  max-width: 700px;
+  width: 100%;
   border: none;
   font-size: 1.6rem;
   padding: 1em;
@@ -92,24 +70,9 @@ form {
   width: 100%;
 }
 
-.image-wrap-positioned {
-  width: 40%;
-  height: 500px;
-}
-.img-info-positioned {
-  width: 225%;
-}
-
 iframe {
+  width: 100%;
   height: 500px;
-}
-
-.map {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 90%;
-  height: 90%;
 }
 
 .contactMethod {
@@ -140,4 +103,40 @@ iframe {
   text-align: center;
   padding: 4em;
   padding-bottom: 0;
+}
+
+#linksContainer {
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row; /* Stack links vertically */
+  align-items: center; /* Center items horizontally */
+  margin: auto;
+  gap: 1em;
+}
+
+#linksContainer a {
+  background-color: var(--formBg);
+  margin: 0.5em;
+  padding: 1em;
+  font-size: 2em;
+  color: #4798ee;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+#linksContainer a:hover {
+  text-decoration: underline;
+  color: #fff; /* Change text color on hover */
+}
+
+#formFeedback {
+  font-size: 2em;
+}
+
+#linksContainer {
+  display: none;
 }
