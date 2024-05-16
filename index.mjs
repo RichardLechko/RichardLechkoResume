@@ -5,12 +5,26 @@ import { weatherApiKey, currencyApiKey } from "./proxy-server/server.mjs";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer"; // Import nodemailer for sending emails
 import dotenv from "dotenv";
+import cors from "cors";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.resolve();
 const app = express();
 app.use(bodyParser.json());
 dotenv.config();
+
+app.use(
+  cors({
+    origin: "https://demo1.richardlechko.com", // Allow requests from this origin
+    methods: ["GET", "POST"], // Allow only GET and POST requests
+    allowedHeaders: ["Content-Type", "Authorization"], // Allow only specified headers
+  })
+);
+
+app.use((req, res, next) => {
+  res.removeHeader("Permissions-Policy");
+  next();
+});
 
 app.use(
   express.static(path.join(__dirname, "richardleckoresume"), {
