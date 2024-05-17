@@ -4,6 +4,8 @@
 
 Welcome to the repository for my personal website! This website serves as an interactive extension of my resume, showcasing my skills, projects, and experiences in a dynamic and colorful format.
 
+I utilized AWS Free Tier EC2 to host my website and using Namecheap for DNS management. Through careful configuration of AWS services including Load Balancers and Target Groups, I ensured access to my site via both HTTP and HTTPS protocols. By setting up aliases for various subdomains, I achieved comprehensive web presence while streamlining DNS management. This approach enabled effective routing and scalability while minimizing costs.
+
 ## Features
 
 - **Colorful Design**: Transformed my traditional black-and-white resume into a vibrant and visually appealing website.
