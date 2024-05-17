@@ -19,17 +19,18 @@ Welcome to the repository for my personal website! This website serves as an int
 - API's
 - NodeJS
 - Git
-- Rsync
+- AWS Free Tier (EC2, Route 53, Target Group, Load Balancer, etc)
 
 ## Getting Started
 
-To view my website, simply visit: (https://richardl.sgedu.site/personal/Richard-Lechko-resume/). Feel free to explore the different sections and interact with the content.
+To view my website, simply visit: (https://www.richardlechko.com). Feel free to explore the different sections and interact with the content.
 
 To run the website locally:
 
 1. Clone this repository to your local machine.
-2. Open the `index.html` file in your web browser.
-3. Explore and enjoy!
+2. Install NodeJS and the required dependencies
+3. Open the `index.html` file in your web browser.
+4. Explore and enjoy!
 
 ## Contributions
 
