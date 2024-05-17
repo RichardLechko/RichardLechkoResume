@@ -28,6 +28,9 @@
 
 .currency-form input,
 .currency-form select {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
   padding: 15px;
   margin-bottom: 5px;
 }
@@ -51,7 +54,6 @@
 }
 
 .image {
-  margin-top: -10px;
   width: 100px;
   height: 130px;
   transform: rotate(90deg);
