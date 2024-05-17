@@ -22,6 +22,8 @@ I utilized AWS Free Tier EC2 to host my website and using Namecheap for DNS mana
 - NodeJS
 - Git
 - AWS Free Tier (EC2, Route 53, Target Group, Load Balancer, etc)
+- Express.js
+- Security
 
 ## Getting Started
 
