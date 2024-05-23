@@ -4,6 +4,8 @@
 
 Welcome to the repository for my personal website! This website serves as an interactive extension of my resume, showcasing my skills, projects, and experiences in a dynamic and colorful format.
 
+I utilized AWS Free Tier EC2 to host my website and using Namecheap for DNS management. Through careful configuration of AWS services including Load Balancers and Target Groups, I ensured access to my site via both HTTP and HTTPS protocols. By setting up aliases for various subdomains, I achieved comprehensive web presence while streamlining DNS management. This approach enabled effective routing and scalability while minimizing costs.
+
 ## Features
 
 - **Colorful Design**: Transformed my traditional black-and-white resume into a vibrant and visually appealing website.
@@ -19,17 +21,20 @@ Welcome to the repository for my personal website! This website serves as an int
 - API's
 - NodeJS
 - Git
-- Rsync
+- AWS Free Tier (EC2, Route 53, Target Group, Load Balancer, etc)
+- Express.js
+- Security
 
 ## Getting Started
 
-To view my website, simply visit: (https://richardl.sgedu.site/personal/Richard-Lechko-resume/). Feel free to explore the different sections and interact with the content.
+To view my website, simply visit: (https://www.richardlechko.com). Feel free to explore the different sections and interact with the content.
 
 To run the website locally:
 
 1. Clone this repository to your local machine.
-2. Open the `index.html` file in your web browser.
-3. Explore and enjoy!
+2. Install NodeJS and the required dependencies
+3. Open the `index.html` file in your web browser.
+4. Explore and enjoy!
 
 ## Contributions
 
