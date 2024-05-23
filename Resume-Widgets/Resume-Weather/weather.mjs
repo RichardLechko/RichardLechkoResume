@@ -76,25 +76,25 @@ async function checkWeather(city, weatherApiKey) {
 function setWeatherIcon(weatherType, weatherIcon) {
   switch (weatherType) {
     case "Clear":
-      weatherIcon.src = "images/clear.png";
+      weatherIcon.src = "../Resume-Weather/images/clear.png";
       break;
     case "Clouds":
-      weatherIcon.src = "images/clouds.png";
+      weatherIcon.src = "../Resume-Weather/images/clouds.png";
       break;
     case "Drizzle":
-      weatherIcon.src = "images/drizzle.png";
+      weatherIcon.src = "../Resume-Weather/images/drizzle.png";
       break;
     case "Humidity":
-      weatherIcon.src = "images/humidity.png";
+      weatherIcon.src = "../Resume-Weather/images/humidity.png";
       break;
     case "Mist":
-      weatherIcon.src = "images/mist.png";
+      weatherIcon.src = "../Resume-Weather/images/mist.png";
       break;
     case "Rain":
-      weatherIcon.src = "images/rain.png";
+      weatherIcon.src = "../Resume-Weather/images/rain.png";
       break;
     case "Snow":
-      weatherIcon.src = "images/snow.png";
+      weatherIcon.src = "../Resume-Weather/images/snow.png";
       break;
     default:
       weatherIcon.src = ""; // Default icon

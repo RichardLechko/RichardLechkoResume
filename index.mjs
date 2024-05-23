@@ -13,9 +13,25 @@ const app = express();
 app.use(bodyParser.json());
 dotenv.config();
 
+const allowedOrigins = [
+  "https://www.richardlechko.com",
+  "https://www.demo1.richardlechko.com",
+  "https://demo1.richardlechko.com",
+  "https://richardlechko.com",
+  "http://localhost:3000",
+];
+
 app.use(
   cors({
-    origin: "https://demo1.richardlechko.com", // Allow requests from this origin
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST"], // Allow only GET and POST requests
     allowedHeaders: ["Content-Type", "Authorization"], // Allow only specified headers
   })
@@ -23,48 +39,63 @@ app.use(
 
 app.use((req, res, next) => {
   res.removeHeader("Permissions-Policy");
+
+  // Set Permissions-Policy without unsupported directives
+  res.setHeader("Permissions-Policy", "interest-cohort=()");
+  res.cookie("yourCookieName", "yourCookieValue", {
+    sameSite: "None",
+    secure: true,
+  });
   next();
 });
 
+app.use(express.static(path.join(__dirname, "richardlechkoresume")));
+app.use(express.static(path.join(__dirname, "")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/home", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "Contact-Page", "contact.html"));
+});
+
+app.get("/widgets", (req, res) => {
+  res.sendFile(path.join(__dirname, "Resume-Widgets", "widgets.html"));
+});
+
+app.get("/timer", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "Resume-Widgets", "Resume-Timer", "index.html")
+  );
+});
+app.get("/weather", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "Resume-Widgets", "Resume-Weather", "index.html")
+  );
+});
+app.get("/currency", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "Resume-Widgets", "Resume-Currency", "index.html")
+  );
+});
+
 app.use(
-  express.static(path.join(__dirname, "richardleckoresume"), {
-    setHeaders: (res, filePath) => {
-      if (filePath.endsWith(".css")) {
-        res.setHeader("Content-Type", "text/css");
-      }
-    },
-  })
+  "/Resume-Currency",
+  express.static(path.join(__dirname, "Resume-Widgets", "Resume-Currency"))
 );
-
-// Define HTML pages and directories
-const htmlPages = [
-  "index.html",
-  "Contact-Page/contact.html",
-  "Resume-Widgets/widgets.html",
-];
-
-const directories = [
-  "Contact-Page",
-  "Resume-Widgets/Resume-Currency",
-  "Resume-Widgets/Resume-Timer",
-  "Resume-Widgets/Resume-TotalTime",
-  "Resume-Widgets/Resume-Weather",
-  "Utility-CSS",
-  "",
-];
-
-// Serve HTML pages
-htmlPages.forEach((page) => {
-  const route = page === "index.html" ? "/" : `/${page.replace(".html", "")}`;
-  app.get(route, (req, res) => {
-    res.sendFile(path.join(__dirname, page));
-  });
-});
-
-// Serve directories
-directories.forEach((directory) => {
-  app.use(`/${directory}`, express.static(path.join(__dirname, directory)));
-});
+app.use(
+  "/Resume-Timer",
+  express.static(path.join(__dirname, "Resume-Widgets", "Resume-Timer"))
+);
+app.use(
+  "/Resume-Weather",
+  express.static(path.join(__dirname, "Resume-Widgets", "Resume-Weather"))
+);
 
 // Endpoint to expose weather API key to the client
 app.get("/api/weather", (req, res) => {

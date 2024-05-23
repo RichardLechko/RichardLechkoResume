@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="Richard Lechko" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../Utility-CSS/footer.css" />
-  <link rel="stylesheet" href="../Utility-CSS/header.css" />
-  <link rel="stylesheet" href="../Utility-CSS/utility.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="../Utility-CSS/footer.css" />
+  <link rel="stylesheet" type="text/css" href="../Utility-CSS/header.css" />
+  <link rel="stylesheet" type="text/css" href="../Utility-CSS/utility.css" />
+  <link rel="stylesheet" type="text/css" href="../Contact-Page/style.css" />
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
@@ -26,32 +26,32 @@
     <div class="box">
       <div>
         <li class="life-link">
-          <a href="../index.html#personal-life">Personal</a>
+          <a href="/home#personal-life">Personal</a>
         </li>
       </div>
       <div>
         <li class="tech-link">
-          <a href="../index.html#technical-skills">Skills</a>
+          <a href="/home#technical-skills">Skills</a>
         </li>
       </div>
       <div>
         <li class="work-link">
-          <a href="../index.html#work-experience">Work</a>
+          <a href="/home#work-experience">Work</a>
         </li>
       </div>
       <div>
         <li class="edu-link">
-          <a href="../index.html#education">Education</a>
+          <a href="/home#education">Education</a>
         </li>
       </div>
       <div>
         <li class="home-link">
-          <a href="../index.html">Home</a>
+          <a href="/home">Home</a>
         </li>
       </div>
       <div>
         <li class="widgets-link">
-          <a href="../Resume-Widgets/widgets.html">Widgets</a>
+          <a href="/widgets">Widgets</a>
         </li>
       </div>
     </div>
@@ -75,6 +75,52 @@
     </p>
   </section>
 
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent">
+    <div id="cookieConsentContainer">
+      <p>We use cookies to improve your experience on our site. By using our site, you agree to our use of cookies. <a
+          href="/privacy-policy">Learn more</a></p>
+      <button id="acceptCookies">I Agree</button>
+    </div>
+  </div>
+
+  <style>
+    #cookieConsent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    #cookieConsentContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    #cookieConsentContainer p {
+      margin: 0;
+    }
+
+    #acceptCookies {
+
+      font-weight: bold;
+      background: #00c853;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+
   <section class="contact-form">
     <h1 class="heading">Get In Touch!</h1>
 
@@ -93,8 +139,8 @@
 
       <div class="google-maps">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142813.576170073!2d-91.90600004917333!3d39.713724304638475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois!5e0!3m2!1sen!2sus!4v1707896484562!5m2!1sen!2sus"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47735.32503472363!2d-87.892340364795!3d41.60261077830801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e3f45afe938e9%3A0xca1b71adb8e82d4b!2sOrland%20Park%2C%20IL!5e0!3m2!1sen!2sus!4v1715926063297!5m2!1sen!2sus"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" aria-hidden="false" tabindex="0"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -142,13 +188,13 @@
       </div>
       <nav id="footer-links">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#personal-life">Personal Life</a></li>
-          <li><a href="../index.html#technical-skills">Skills</a></li>
-          <li><a href="../index.html#work-experience">Work Experience</a></li>
-          <li><a href="../index.html#education">Education</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="../Resume-Widgets/widgets.html">Widgets</a></li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/home#personal-life">Personal Life</a></li>
+          <li><a href="/home#technical-skills">Skills</a></li>
+          <li><a href="/home#work-experience">Work Experience</a></li>
+          <li><a href="/home#education">Education</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/widgets">Widgets</a></li>
         </ul>
       </nav>
       <div class="social">

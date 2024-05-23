@@ -20,7 +20,7 @@ const contactFormEventListener = () => {
       const formData = new FormData(contactForm); // Get form data
       const formObject = Object.fromEntries(formData.entries()); // Convert FormData to plain object
 
-      const response = await fetch("https://demo1.richardlechko.com/submit", {
+      const response = await fetch("https://www.richardlechko.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -20,11 +20,8 @@ const app = express();
 const weatherApiKey = process.env.WEATHER_API_KEY; // Define weatherApiKey here
 const currencyApiKey = process.env.CURRENCY_API_KEY; // Define currencyApiKey here
 
-app.use(express.static(path.join(__dirname, "freedombutchers-main")));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "freedombutchers-main")));
 
 // Export weatherApiKey
 export { weatherApiKey };
