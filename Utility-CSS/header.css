@@ -34,6 +34,7 @@ html {
 }
 
 body {
+  padding-top: 60px;
   width: 100%;
 }
 
@@ -70,51 +71,136 @@ section {
 /************ HEADER ************/
 /************ HEADER ************/
 
-.header {
-  background-color: var(--gray);
-}
-
 .headertitle,
 .footertitle {
   font-family: monospace;
 }
 
 .header {
+  display: flex;
+  flex-direction: column; /* Ensure the header is a column flex container */
+  align-items: center; /* Center the content horizontally */
   background-color: var(--gray);
+  width: 100%;
+  padding-top: 15em;
+}
+
+.div-header {
+  flex: 0 0 auto; /* Ensure the header title does not shrink */
 }
 
 .div-header h1 {
-  margin: auto;
-  font-size: 4em;
-  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  white-space: nowrap;
+  font-size: 4em; /* Adjust as needed */
+  position: relative; /* Ensure the pseudo-element is positioned relative to the h1 */
+  border-right: 2px solid orange; /* Border to simulate the cursor */
 }
 
-.life-link a,
-.tech-link a,
-.work-link a,
-.edu-link a,
-.contact-link a,
-.widgets-link a,
-.home-link a {
-  background-color: #f0f0f0;
-  font-size: 2em;
-  list-style-type: none;
+.div-header h1:after {
+  content: ""; /* Use an empty content for the cursor */
+  border-right: 2px solid orange; /* Border to simulate the cursor */
+  position: absolute; /* Absolutely position the cursor */
+  top: 50%; /* Position it vertically centered */
+  left: 100%; /* Position it at the end of the text */
+  transform: translateY(-50%); /* Adjust to vertically center the cursor */
+}
+
+.div-header h1.finished {
+  border-color: transparent; /* Hide the cursor after typing is done */
+}
+
+@keyframes blinkCursor {
+  0% {
+    opacity: 1; /* Make the cursor visible */
+  }
+  50% {
+    opacity: 0; /* Make the cursor invisible */
+  }
+  100% {
+    opacity: 1; /* Make the cursor visible again */
+  }
+}
+
+.navbar {
+  display: flex; /* Use flexbox for the navbar layout */
+  justify-content: center; /* Center the navbar content */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--gray);
+  border-bottom: 5px solid black;
 }
 
 .box {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 2.5em;
-  margin-left: 2em;
-  margin-right: 2em;
-
-  gap: 4em;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-around; /* Distribute space evenly around items */
+  margin-top: 0;
+  padding: 30px;
+  list-style: none;
+  width: 100%; /* Ensure the box takes full width */
 }
-.box > * {
-  border-radius: 15px;
-  padding: 20px 10px 20px 10px;
-  border: none;
-  background-color: #f0f0f0;
-  flex: 1 1 160px;
+
+.box > li {
+  background-color: black;
+  margin: 1.5em;
+  flex: 1 1 auto; /* Allow items to grow and shrink as needed */
   text-align: center;
+  padding: 1.25em;
+  border-radius: 1em;
+  min-width: 120px; /* Minimum width for each item to ensure responsiveness */
+}
+
+.box > li > a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 10px;
+}
+
+.box > li > a:hover {
+  color: red;
+}
+
+@media (width < 985px) {
+  .box > li > a {
+    font-size: 1.3rem;
+    padding: 5px;
+  }
+}
+
+@media (width < 975px) {
+  .header {
+    padding-top: 22em;
+  }
+}
+
+@media (width < 750px) {
+  .div-header h1 {
+    font-size: 3em;
+  }
+}
+
+@media (width < 540px) {
+  .div-header h1 {
+    font-size: 2.5em;
+  }
+
+  .header {
+    padding-top: 17em;
+  }
+
+  .box > li {
+    margin: 1em;
+    flex: 1 1 auto; /* Allow items to grow and shrink as needed */
+    text-align: center;
+    padding: 5px;
+    border-radius: 1em;
+    min-width: 120px; /* Minimum width for each item to ensure responsiveness */
+  }
 }

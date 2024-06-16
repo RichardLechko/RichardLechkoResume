@@ -9,10 +9,10 @@
   max-height: 100%;
 }
 
-.technical-skills .card {
+.technical-skills .flex .card {
   max-width: 390px;
   max-height: 500px;
-  padding: 30px;
+  padding-bottom: 30px;
 }
 
 .technical-skills .card h4 {

@@ -10,11 +10,6 @@
   line-height: 2em;
 }
 
-/* Add a more specific selector */
-.container .tech-note p {
-  font-size: 2.4rem; /* Adjust the font size as needed */
-}
-
 .life-text li {
   padding-left: 100px;
   font-size: 2.1rem;
@@ -30,17 +25,17 @@
 /************ COMPUTING AND NON-COMPUTING SKILLS ***********/
 /************ COMPUTING AND NON-COMPUTING SKILLS ***********/
 
-#technical-skills {
+#technical-skills,
+#non-technical-skills {
   margin-bottom: 100px;
 }
 
-#non-technical-skills {
-  margin-bottom: 50px;
+#technical-skills {
+  padding-bottom: 20em;
 }
 
 .technical-skills .flex,
-.non-technical-skills .flex,
-.header .flex {
+.non-technical-skills .flex {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -124,20 +119,15 @@
   color: white;
 }
 
-.color-coded {
-  width: 100%;
-  margin: auto;
-  padding-top: 2em;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  gap: 4em;
-}
-
 .technical-skills .color-card {
   border-radius: 10px;
   border: 2px solid black;
+  margin: 2em;
   background-color: #f0f0f0;
+}
+
+.technical-skills .color-card h4 {
+  margin: auto;
 }
 
 .technical-skills .card:hover .rating[data-understanding="level6"] {
@@ -162,10 +152,6 @@
 
 .horizontal-card {
   display: flex;
-}
-
-#technical-skills {
-  padding-bottom: 20em;
 }
 
 .skills-grid {
@@ -226,6 +212,13 @@
   margin-bottom: 50px;
 }
 
+.marianos dd,
+.mcd dd {
+  margin-left: 1em;
+  display: list-item;
+  list-style-type: disc;
+}
+
 /******** EDUCATION *********/
 /******** EDUCATION *********/
 /******** EDUCATION *********/
@@ -242,6 +235,11 @@
   padding-bottom: 3px;
 }
 
+.edu-text .enrollment {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
 .edu-text a {
   text-decoration: none;
   color: #054696;
@@ -251,38 +249,120 @@
   color: #e4002b;
 }
 
+.coursework .container .coursework-content ul {
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+}
+
+.coursework .container .coursework-content h4 {
+  font-size: 2em;
+}
+
+.coursework .container .coursework-content ul li ul li {
+  margin: 1em;
+  list-style-type: disc;
+}
+
+.coursework-ul {
+  padding: 1em;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+}
+
+.coursework .container .coursework-content ul .course-item {
+  color: white;
+  background-color: #000;
+  margin: 2em;
+}
+
+.course-item {
+  border-radius: 20px;
+  padding: 2em;
+}
+
+.course-item ul {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.coursework .container .coursework-content ul li ul {
+  flex-direction: column;
+  display: flex;
+}
+
+.coursework .container .coursework-content ul li ul li {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-left: 1.5em;
+}
+
+.coursework .container .coursework-content ul li ul li span {
+  border-bottom: 1px solid white;
+}
+
 @media only screen and (width <= 1564px) {
-  #technical-skills {
-    margin-bottom: 100px;
+  div > * {
+    outline: 10px solid gray;
   }
 
-  .box-disappear,
-  .color-text {
-    display: none;
+  #technical-skills {
+    margin-bottom: 100px;
   }
 }
 
 @media only screen and (width <= 1530px) {
+  div > * {
+    outline: 10px solid yellow;
+  }
   #technical-skills {
-    margin-bottom: 200px;
+    margin-bottom: 250px;
   }
 }
 
 @media only screen and (width <= 1092px) {
+  div > * {
+    outline: 10px solid firebrick;
+  }
   #technical-skills {
     margin-bottom: 300px;
   }
 }
 
 @media only screen and (width <= 1049px) {
+  div > * {
+    outline: 10px solid violet;
+  }
+
   #technical-skills {
     margin-bottom: 400px;
   }
 }
 
 @media only screen and (width <= 997px) {
+  div > * {
+    outline: 10px solid green;
+  }
   #technical-skills {
-    margin-bottom: 350px;
+    margin-bottom: 400px;
+  }
+}
+@media only screen and (width <= 720px) {
+  div > * {
+    outline: 10px solid red;
+  }
+  #technical-skills {
+    margin-bottom: 700px;
+  }
+}
+@media only screen and (width <= 600px) {
+  div > * {
+    outline: 10px solid blue;
+  }
+  #technical-skills {
+    margin-bottom: 800px;
   }
 }
 

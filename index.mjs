@@ -49,8 +49,29 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "richardlechkoresume")));
+// Serve static files from the root directory
 app.use(express.static(path.join(__dirname, "")));
+app.use(express.static(path.join(__dirname, "richardlechkoresume")));
+app.use(express.static(path.join(__dirname, "Resume-Widgets")));
+
+app.use(
+  "/Resume-Currency",
+  express.static(
+    path.join(__dirname, "public", "Resume-Widgets", "Resume-Currency")
+  )
+);
+app.use(
+  "/Resume-Timer",
+  express.static(
+    path.join(__dirname, "public", "Resume-Widgets", "Resume-Timer")
+  )
+);
+app.use(
+  "/Resume-Weather",
+  express.static(
+    path.join(__dirname, "public", "Resume-Widgets", "Resume-Weather")
+  )
+);
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
@@ -67,35 +88,21 @@ app.get("/contact", (req, res) => {
 app.get("/widgets", (req, res) => {
   res.sendFile(path.join(__dirname, "Resume-Widgets", "widgets.html"));
 });
-
-app.get("/timer", (req, res) => {
+app.get("/widgets/timer", (req, res) => {
   res.sendFile(
     path.join(__dirname, "Resume-Widgets", "Resume-Timer", "index.html")
   );
 });
-app.get("/weather", (req, res) => {
+app.get("/widgets/weather", (req, res) => {
   res.sendFile(
     path.join(__dirname, "Resume-Widgets", "Resume-Weather", "index.html")
   );
 });
-app.get("/currency", (req, res) => {
+app.get("/widgets/currency", (req, res) => {
   res.sendFile(
     path.join(__dirname, "Resume-Widgets", "Resume-Currency", "index.html")
   );
 });
-
-app.use(
-  "/Resume-Currency",
-  express.static(path.join(__dirname, "Resume-Widgets", "Resume-Currency"))
-);
-app.use(
-  "/Resume-Timer",
-  express.static(path.join(__dirname, "Resume-Widgets", "Resume-Timer"))
-);
-app.use(
-  "/Resume-Weather",
-  express.static(path.join(__dirname, "Resume-Widgets", "Resume-Weather"))
-);
 
 // Endpoint to expose weather API key to the client
 app.get("/api/weather", (req, res) => {
@@ -147,11 +154,11 @@ app.post("/submit", async (req, res) => {
         text: "Upwork",
       },
       {
-        url: "Richard_Lechko_Resume_May_10_2024.docx",
+        url: "Richard_Lechko_Resume_May_29_2024.docx",
         text: "Download Resume (DocX)",
       },
       {
-        url: "Richard_Lechko_Resume_May_10_2024.pdf",
+        url: "Richard_Lechko_Resume_May_29_2024.pdf",
         text: "Download Resume (PDF)",
       },
 
