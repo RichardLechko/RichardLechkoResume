@@ -223,14 +223,16 @@
 /******** EDUCATION *********/
 /******** EDUCATION *********/
 
-.edu-text p {
+.edu-text p,
+.pub-text p {
   color: var(--dark-violet);
   margin-bottom: 25px;
   font-size: 2.4rem;
   line-height: 3.95rem;
 }
 
-.edu-text span {
+.edu-text span,
+.pub-text span {
   border-bottom: 1px solid #000;
   padding-bottom: 3px;
 }
@@ -303,64 +305,49 @@
   border-bottom: 1px solid white;
 }
 
-@media only screen and (width <= 1564px) {
-  div > * {
-    outline: 10px solid gray;
-  }
+/********** PUBLICATIONS ********/
+/********** PUBLICATIONS ********/
+/********** PUBLICATIONS ********/
 
+#publications .pub .pub-text p a {
+  background-color: yellow;
+}
+
+@media only screen and (width <= 1564px) {
   #technical-skills {
     margin-bottom: 100px;
   }
 }
 
 @media only screen and (width <= 1530px) {
-  div > * {
-    outline: 10px solid yellow;
-  }
   #technical-skills {
     margin-bottom: 250px;
   }
 }
 
 @media only screen and (width <= 1092px) {
-  div > * {
-    outline: 10px solid firebrick;
-  }
   #technical-skills {
     margin-bottom: 300px;
   }
 }
 
 @media only screen and (width <= 1049px) {
-  div > * {
-    outline: 10px solid violet;
-  }
-
   #technical-skills {
     margin-bottom: 400px;
   }
 }
 
 @media only screen and (width <= 997px) {
-  div > * {
-    outline: 10px solid green;
-  }
   #technical-skills {
     margin-bottom: 400px;
   }
 }
 @media only screen and (width <= 720px) {
-  div > * {
-    outline: 10px solid red;
-  }
   #technical-skills {
     margin-bottom: 700px;
   }
 }
 @media only screen and (width <= 600px) {
-  div > * {
-    outline: 10px solid blue;
-  }
   #technical-skills {
     margin-bottom: 800px;
   }
