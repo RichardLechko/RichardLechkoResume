@@ -9,37 +9,27 @@ import path from "path";
 import "dotenv/config";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
-// Create a proxy server instance
 const proxy = httpProxy.createProxyServer({});
 dotenv.config();
-
-// Initialize Express app
 const app = express();
 
-const weatherApiKey = process.env.WEATHER_API_KEY; // Define weatherApiKey here
-const currencyApiKey = process.env.CURRENCY_API_KEY; // Define currencyApiKey here
+const weatherApiKey = process.env.WEATHER_API_KEY;
+const currencyApiKey = process.env.CURRENCY_API_KEY;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Export weatherApiKey
 export { weatherApiKey };
-
-// Export currencyApiKey
 export { currencyApiKey };
 
 const weatherApiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-
 const currencyApiUrl = "https://api.freecurrencyapi.com/v1/latest?";
 
-// Proxy requests to the target server
 const server = http.createServer((req, res) => {
-  proxy.web(req, res, { target: "http://localhost:3000" }); // Assuming your main application is running on port 3000
+  proxy.web(req, res, { target: "http://localhost:3000" }); // Change this to whatever ur application is running on
 });
 
-// Route handler for fetching weather data
 app.get("/api/weather", async (req, res) => {
   const city = req.query.city;
   try {
@@ -54,7 +44,6 @@ app.get("/api/weather", async (req, res) => {
   }
 });
 
-// Route handler for fetching currency data
 app.get("/api/currency-key", async (req, res) => {
   try {
     const apiKey = process.env.CURRENCY_API_KEY;
@@ -67,35 +56,30 @@ app.get("/api/currency-key", async (req, res) => {
   }
 });
 
-// Handle contact form submissions
 app.post("/submit", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
-    // Send email
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "richardlechko04@gmail.com", // Update with your email
-        pass: process.env.GMAIL_PASS, // Update with your email password or use environment variables
+        user: "richardlechko04@gmail.com",
+        pass: process.env.GMAIL_PASS,
       },
     });
 
     const mailOptions = {
-      from: "richardlechko04@gmail.com", // Update with your email address
-      to: email, // Use the email provided by the user
+      from: "richardlechko04@gmail.com",
+      to: email,
       subject: subject,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
     };
 
     await transporter.sendMail(mailOptions);
-
-    // Send success response
     res.status(200).json({ success: true });
   } catch (error) {
     console.error("Error sending email:", error);
 
-    // Check for specific errors
     if (error.code === "EAUTH") {
       res.status(500).json({
         success: false,
@@ -107,7 +91,6 @@ app.post("/submit", async (req, res) => {
   }
 });
 
-// Listen for requests on port 4000
 server.listen(4000, () => {
   console.log("Proxy server is listening on port 4000");
 });
