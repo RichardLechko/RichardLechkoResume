@@ -58,9 +58,7 @@ app.get("/api/weather", async (req, res) => {
 app.get("/api/currency-key", async (req, res) => {
   try {
     const apiKey = process.env.CURRENCY_API_KEY;
-    const response = await fetch(
-      `https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`
-    );
+    const response = await fetch(`${currencyApiUrl}apikey=${apiKey}`);
     const data = await response.json();
     res.json(data);
   } catch (error) {

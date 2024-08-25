@@ -154,11 +154,11 @@ app.post("/submit", async (req, res) => {
         text: "Upwork",
       },
       {
-        url: "Richard_Lechko_Resume_May_29_2024.docx",
+        url: "Resume.docx",
         text: "Download Resume (DocX)",
       },
       {
-        url: "Richard_Lechko_Resume_May_29_2024.pdf",
+        url: "Resume.pdf",
         text: "Download Resume (PDF)",
       },
 
